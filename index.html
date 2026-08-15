@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Aplicación móvil / PWA DSouza — HTML5, CSS3 y JavaScript vanilla (ES6+).">
+  <meta name="theme-color" content="#0f4c81">
+  <title>DSouza — App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">DSouza<span class="dot">.</span></h1>
+    <span id="net-status" class="net-status" title="Estado de conexión">●</span>
+  </header>
+
+  <main class="app-main">
+    <section class="panel">
+      <h2>Aplicación instalable</h2>
+      <p>Esta PWA funciona sin conexión y se puede instalar en tu dispositivo.</p>
+      <button id="btn-install" class="btn" type="button" hidden>Instalar app</button>
+      <p id="sw-status" class="status" role="status" aria-live="polite">Comprobando Service Worker…</p>
+    </section>
+
+    <section class="panel">
+      <h2>Contador de ejemplo</h2>
+      <p class="counter" id="counter">0</p>
+      <div class="counter-actions">
+        <button class="btn btn-secondary" id="btn-minus" type="button" aria-label="Restar">−</button>
+        <button class="btn" id="btn-plus" type="button" aria-label="Sumar">+</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; <span id="year"></span> DSouza — PWA vanilla</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
